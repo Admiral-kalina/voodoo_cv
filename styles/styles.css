@@ -1,0 +1,307 @@
+@import url("../fonts/AvenirNext/style.css");
+
+body {
+    font-family: Intel Sans Serif, serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+p {
+    font-family: AvenirNext, serif;
+    line-height: 28px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: minmax(auto, 630px) minmax(auto, 470px);
+    grid-column-gap: 40px;
+    max-width: 1480px;
+    padding: 0 20px 150px 20px;
+    margin: 138px auto 138px auto;
+    justify-content: center;
+}
+
+.main-form {
+    max-width: 100%;
+}
+
+.form-title {
+    font-family: 'Avenir Next', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.form-subtitle {
+    margin-top: 13px;
+    line-height: 28px;
+}
+
+.main-map {
+
+}
+
+.form-fieldset {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px 32px;
+    border: none;
+    margin-top: 26px;
+}
+
+.form-fieldset_fullScreen .select {
+    width: calc(200% + 35px);
+}
+
+.form-fieldset_fullScreen  textarea {
+    height: 338px;
+    background: #FFFFFF;
+    box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
+    border-radius: 8px;
+    width: calc(200% + 35px);
+    resize: none;
+}
+
+.form-fieldset textarea::placeholder, input::placeholder {
+    color: rgba(65, 64, 66, 0.5);
+}
+
+.form-input {
+    font-family: Intel Sans Serif, serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 64px;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #fff;
+    box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
+    padding: 18px 19px 18px 19px;
+    color: rgba(65, 64, 66, 1);
+}
+
+.form-textarea {
+    margin-bottom: 51px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #fff;
+    box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
+    padding: 18px 19px 18px 19px;
+}
+
+.form-submit {
+    width: 221px;
+    height: 57px;
+    cursor: pointer;
+    background: #1A1A1A;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*Select*/
+
+.select {
+    height: 64px;
+    background: #fff;
+    position: relative;
+    color: #424242;
+    width: 100%;
+    box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
+    border-radius: 8px;
+}
+
+.form-select_hidden {
+    display: none;
+}
+
+.select .selectBtn {
+    font-family: Intel Sans Serif, serif;
+    height: 64px;
+    padding: 23px 0 18px 19px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    background: #fff;
+    color: rgba(65, 64, 66, 0.5);
+}
+
+.select .selected {
+    color: #424242;
+}
+
+.select .selectBtn:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transition: 0.2s ease;
+}
+
+.select .selectBtn.toggle {
+    border-radius: 3px 3px 0 0;
+}
+
+.select .selectBtn.toggle:after {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.select .selectDropdown {
+    position: absolute;
+    padding: 5px 0;
+    top: 90%;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    z-index: 1;
+    background: #fff;
+    transform: scale(1, 0);
+    transform-origin: top center;
+    visibility: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
+}
+
+.select .selectDropdown .option {
+    padding: 6.5px 0 6.5px 19px;
+    line-height: 28px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.select .selectDropdown .option:hover {
+    background: #F2F2F2;
+    margin: 0 19px;
+}
+
+.select .selectDropdown.toggle {
+    visibility: visible;
+    transform: scale(1, 1);
+}
+
+/*Map*/
+
+#map {
+    height: 100%;
+}
+
+#map button, a, span, .gmnoprint, .gm-style-iw-tc {
+    display: none !important;
+}
+
+.gm-style-iw {
+    padding: 20px 19px 17px 19px !important;
+    min-width: 244px !important;
+    height: 161px;
+}
+
+.firstHeading {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.bodyContent-description {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.bodyContent-info {
+    padding-left: 29px;
+}
+
+.feedback {
+    font-size: 12px;
+    line-height: 22px;
+    color: #858585;
+}
+
+.bodyContent-phone {
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    color: #858585;
+}
+
+.bodyContent-phone:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    width: 12px;
+    height: 13px;
+    display: block;
+    background-image: url("../images/phone.svg");
+    background-repeat: no-repeat;
+}
+
+.bodyContent-mail {
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    color: #858585;
+}
+
+.bodyContent-mail::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-image: url("../images/mail.svg");
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .main {
+        margin: 100px auto 138px auto;
+    }
+    .form-fieldset {
+        grid-template-columns: 1fr ;
+    }
+    .form-fieldset_fullScreen .select {
+        width: 100%;
+    }
+    .form-fieldset_fullScreen  textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 573px ;
+        margin: 77px auto 138px auto;
+    }
+    .main-map{
+        margin-top: 77px;
+    }
+    .form-submit{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,7 @@
+@font-face {
+    src: local('Avenir Next Bold'), local('Avenir-Next-Bold'),
+        url('AvenirNextCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
