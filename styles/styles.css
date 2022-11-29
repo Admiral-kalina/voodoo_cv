@@ -38,10 +38,6 @@ p {
     line-height: 28px;
 }
 
-.main-map {
-
-}
-
 .form-fieldset {
     display: grid;
     max-width: 100%;
@@ -55,7 +51,7 @@ p {
     width: calc(200% + 35px);
 }
 
-.form-fieldset_fullScreen  textarea {
+.form-fieldset_fullScreen textarea {
     height: 338px;
     background: #FFFFFF;
     box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
@@ -81,6 +77,10 @@ p {
     color: rgba(65, 64, 66, 1);
 }
 
+.form-input:focus {
+    outline: none;
+}
+
 .form-textarea {
     margin-bottom: 51px;
     box-sizing: border-box;
@@ -89,6 +89,10 @@ p {
     background-color: #fff;
     box-shadow: 0 16px 32px rgba(202, 203, 210, 0.25);
     padding: 18px 19px 18px 19px;
+}
+
+.form-textarea {
+    outline: none;
 }
 
 .form-submit {
@@ -133,6 +137,10 @@ p {
     user-select: none;
     background: #fff;
     color: rgba(65, 64, 66, 0.5);
+}
+
+.selectBtn:focus {
+    outline: none;
 }
 
 .select .selected {
@@ -200,7 +208,7 @@ p {
     height: 100%;
 }
 
-#map button, a, span, .gmnoprint, .gm-style-iw-tc {
+.gmnoprint, .gm-fullscreen-control, a, .gm-ui-hover-effect, .gm-style-iw-tc {
     display: none !important;
 }
 
@@ -273,20 +281,22 @@ p {
     .main {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 @media screen and (max-width: 1025px) {
     .main {
         margin: 100px auto 138px auto;
     }
+
     .form-fieldset {
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
     }
+
     .form-fieldset_fullScreen .select {
         width: 100%;
     }
-    .form-fieldset_fullScreen  textarea {
+
+    .form-fieldset_fullScreen textarea {
         width: 100%;
     }
 }
@@ -294,13 +304,15 @@ p {
 @media screen and (max-width: 767px) {
     .main {
         grid-template-columns: 1fr;
-        grid-template-rows:1fr 573px ;
+        grid-template-rows:1fr 573px;
         margin: 77px auto 138px auto;
     }
-    .main-map{
+
+    .main-map {
         margin-top: 77px;
     }
-    .form-submit{
+
+    .form-submit {
         width: 100%;
     }
 }

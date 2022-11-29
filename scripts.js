@@ -40,7 +40,6 @@ const selectOption = document.querySelectorAll('.option');
 function hideOnClickOutside() {
     const outsideClickListener = e => {
         select.forEach(selector => {
-            console.log(e.composedPath().includes(selector))
             if (!e.composedPath().includes(selector)) {
                 selector.children[1].classList.remove('toggle');
             }
